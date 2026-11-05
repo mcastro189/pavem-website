@@ -1,0 +1,476 @@
+/* GENERAL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F3EA;
+    color: #111111;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #F5F3EA;
+    height: 95px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* PAVEM LOGO */
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #111111;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* NAVIGATION */
+
+nav a {
+    color: #111111;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    background-color: #365C42;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+
+/* HOME INTRODUCTION */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h3 {
+    color: #365C42;
+    font-size: 0.9rem;
+}
+
+.hero img {
+    width: 45%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* PICKUP GAMES */
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.filters select {
+    padding: 12px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    background-color: white;
+    flex: 1;
+}
+
+.game-listing {
+    display: flex;
+    gap: 25px;
+    background-color: #DDE9D5;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.game-listing img {
+    width: 250px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* HOME PAGE VIDEO */
+
+.video-box {
+    padding: 0;
+    background: none;
+}
+
+.video-box iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
+}
+
+/* COMMUNITY */
+
+.community-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.community-section > div {
+    flex: 1;
+}
+
+.video-box {
+    background-color: #DDE9D5;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #111111;
+    color: white;
+    padding: 25px 30px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-links p {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+
+/* SMALLER SCREENS */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero,
+    .game-listing,
+    .community-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero img,
+    .game-listing img {
+        width: 100%;
+        height: auto;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filters select {
+        min-width: 140px;
+    }
+}
+
+/* FIND FIELD PAGE */
+
+.field-intro {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.field-search {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.field-search input,
+.field-search select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.field-search button {
+    background-color: #365C42;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.map-section iframe {
+    border-radius: 8px;
+}
+
+.field-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #DDE9D5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.field-card img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.field-card div {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .field-search,
+    .field-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .field-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* COMMUNITY PAGE */
+
+.community-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 40px auto 60px;
+}
+
+.soccer-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.soccer-gallery figure {
+    margin: 0;
+}
+
+.soccer-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.soccer-gallery figcaption {
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.get-involved {
+    background-color: #DDE9D5;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.faq-section details {
+    background-color: #DDE9D5;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.faq-section summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-section details p {
+    margin-bottom: 0;
+}
+
+.stay-connected {
+    text-align: center;
+    padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .soccer-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .soccer-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* INTERACTIVE GALLERY */
+
+.soccer-gallery img {
+    cursor: pointer;
+}
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.gallery-modal img {
+    max-width: 70%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.gallery-modal button {
+    background-color: #365C42;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#close-gallery {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+/* NIGHT MODE */
+
+#night-mode {
+    background-color: #365C42;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+body.dark-mode,
+body.dark-mode header {
+    background-color: #111111;
+    color: white;
+}
+
+body.dark-mode nav a,
+body.dark-mode .logo a {
+    color: white;
+}
+
+body.dark-mode .hero-text h3 {
+    color: #A9C9A0;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAVEM | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Pavem Logo.svg" alt="PAVEM Logo">
+                <span>PAVEM</span>
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="fields.html">Find Field</a>
+            <a href="community.html">Community</a>
+        </nav>
+
+        <a href="fields.html" class="button">Find a Field</a>
+    </header>   
+<button id="night-mode" type="button">Toggle Night Mode</button>
+    <main>
+
+        <!-- INTRODUCTION -->
+        <section class="hero">
+            <div class="hero-text">
+                <h3>REAL GAMES. REAL PEOPLE. OC.</h3>
+                <h1>YOUR NEXT GAME STARTS HERE.</h1>
+
+                <p>
+                    Discover local pickup games and meet players
+                    around Orange County.
+                </p>
+
+                <a href="fields.html" class="button">Explore Fields</a>
+            </div>
+
+            <img src="images/soccer-players.jpg"
+                 alt="Soccer players enjoying a game">
+        </section>
+
+        <!-- UPCOMING GAMES -->
+        <section class="games-section">
+            <h2>Upcoming Pickup Games</h2>
+            <p>Explore pickup soccer around Orange County.</p>
+
+            <div class="filters">
+                <select aria-label="Location">
+                    <option>Location</option>
+                    <option>Cypress</option>
+                    <option>Costa Mesa</option>
+                    <option>Irvine</option>
+                    <option>Huntington Beach</option>
+                </select>
+
+                <select aria-label="Date">
+                    <option>Date</option>
+                    <option>Weekday</option>
+                    <option>Weekend</option>
+                </select>
+
+                <select aria-label="Skill Level">
+                    <option>Skill Level</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+
+                <select aria-label="Format">
+                    <option>Format</option>
+                    <option>5v5</option>
+                    <option>7v7</option>
+                    <option>11v11</option>
+                </select>
+            </div>
+
+            <div class="game-listing">
+                <img src="images/aerial-field.jpg"
+                     alt="Soccer field from above">
+
+                <div>
+                    <h3>5v5 Pickup Game</h3>
+                    <p>Cypress, California</p>
+                    <p>Example game listing for the website concept.</p>
+                    <a href="fields.html" class="button">View Field</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY -->
+        <section class="community-section">
+            <div>
+                <h2>More Than Just Games</h2>
+
+                <p>
+                    PAVEM brings soccer players together to play,
+                    connect, and enjoy the game. Whether you're new
+                    to soccer or have played for years, everyone
+                    should have a place on the field.
+                </p>
+
+                <a href="community.html" class="button">
+                    Meet the Community
+                </a>
+            </div>
+
+            <div class="video-box">
+                <iframe
+                    src="https://www.youtube.com/embed/CwqDD8yGpc8"
+                    title="Soccer Community Video"
+                    width="560"
+                    height="315"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+    <h3>PAVEM</h3>
+    <p>2026 PAVEM | paveyourmatch</p>
+
+    <div class="footer-links">
+        <p>
+            Email:
+            <a href="mailto:melvin@paveyourmatch.com">
+                melvin@paveyourmatch.com
+            </a>
+        </p>
+
+        <p>
+            Instagram:
+            <a href="https://www.instagram.com/paveyourmatch/"
+               target="_blank"
+               rel="noopener noreferrer">
+                @paveyourmatch
+            </a>
+        </p>
+    </div>
+    </footer>
+
+</body>
+</html>

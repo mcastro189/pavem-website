@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAVEM | Find Field</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Pavem Logo.svg" alt="PAVEM Logo">
+                <span>PAVEM</span>
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="fields.html">Find Field</a>
+            <a href="community.html">Community</a>
+        </nav>
+
+        <a href="fields.html" class="button">Find a Field</a>
+    </header>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+        <section class="field-intro">
+            <h1>Find a Soccer Field</h1>
+            <p>
+                Explore soccer fields around Orange County.
+                Find a location that works for you and learn
+                more about the field before you visit.
+            </p>
+
+            <!-- SEARCH OPTIONS -->
+            <div class="field-search">
+                <input type="text" placeholder="Enter City or ZIP Code"
+                       aria-label="City or ZIP Code">
+
+                <select aria-label="Field Type">
+                    <option>Field Type</option>
+                    <option>Turf</option>
+                    <option>Grass</option>
+                </select>
+
+                <select aria-label="Distance">
+                    <option>Distance</option>
+                    <option>5 Miles</option>
+                    <option>10 Miles</option>
+                    <option>20 Miles</option>
+                </select>
+
+                <button type="button">Search</button>
+            </div>
+        </section>
+
+        <!-- GOOGLE MAP -->
+        <section class="map-section">
+            <h2>Explore Fields on the Map</h2>
+
+            <iframe
+                src="https://www.google.com/maps?q=Lexington+Park+Cypress+CA&output=embed"
+                width="100%"
+                height="400"
+                style="border:0;"
+                loading="lazy"
+                title="Google Map showing Lexington Park in Cypress">
+            </iframe>
+        </section>
+
+        <!-- FEATURED FIELD -->
+        <section class="featured-field">
+            <h2>Featured Soccer Field</h2>
+
+            <div class="field-card">
+                <img src="images/lexington-park.jpg"
+                     alt="Lexington Park soccer field">
+
+                <div>
+                    <h3>Lexington Park - Cypress</h3>
+
+                    <p>Location: Cypress, California</p>
+                    <p>Field Type: Turf</p>
+                    <p>
+                        Explore this soccer field and learn
+                        more about its location.
+                    </p>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Lexington+Park+Cypress+CA"
+                       class="button"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OTHER FIELDS -->
+        <section>
+            <h2>Other Fields Near You</h2>
+
+            <h3>Irvine Regional Park</h3>
+            <p>Orange, California</p>
+            <p>Explore more outdoor spaces around Orange County.</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>PAVEM</h3>
+        <p>2026 PAVEM | paveyourmatch</p>
+
+        <div class="footer-links">
+            <p>
+                Email:
+                <a href="mailto:melvin@paveyourmatch.com">
+                    melvin@paveyourmatch.com
+                </a>
+            </p>
+
+            <p>
+                Instagram:
+                <a href="https://www.instagram.com/paveyourmatch/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    @paveyourmatch
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
