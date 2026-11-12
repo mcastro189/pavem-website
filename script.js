@@ -48,10 +48,31 @@ if (galleryModal && galleryImages.length > 0) {
     });
 }
 
+/* NIGHT MODE FOR ALL THREE PAGES */
+
+// Remember the visitor's selected mode
+if (localStorage.getItem("pavem-night-mode") === "on") {
+    document.body.classList.add("dark-mode");
+}
+
 const nightButton = document.getElementById("night-mode");
 
 if (nightButton) {
     nightButton.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+
+        localStorage.setItem(
+            "pavem-night-mode",
+            isDark ? "on" : "off"
+        );
+
+        nightButton.textContent = isDark ? "Light Mode" : "Night Mode";
     });
+
+    // Display the correct label when the page loads
+    if (document.body.classList.contains("dark-mode")) {
+        nightButton.textContent = "Light Mode";
+    }
 }

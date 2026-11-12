@@ -61,6 +61,71 @@ header {
     border-bottom: 1px solid #dddddd;
 }
 
+/* HOME HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .button,
+.hero-buttons #night-mode {
+    margin-top: 10px;
+}
+
+#night-mode {
+    width: auto;
+    display: inline-block;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* GREEN NAVIGATION BUBBLES */
+
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.header-nav a {
+    display: inline-block;
+    background-color: #365C42;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0;
+    transition: background-color 0.2s ease;
+}
+
+/* WHITE LOGO IN NIGHT MODE */
+
+body.dark-mode .logo img {
+    filter: brightness(0) invert(1);
+}
+
+/* HOVER */
+.header-nav a:hover {
+    background-color: #24452F;
+}
+
+/* ACTIVE WHEN CLICKING */
+.header-nav a:active {
+    background-color: #173420;
+}
+
+/* CURRENT PAGE */
+.header-nav a[aria-current="page"] {
+    background-color: #111111;
+    color: white;
+}
+
 
 /* PAVEM LOGO */
 
@@ -473,4 +538,293 @@ body.dark-mode .logo a {
 
 body.dark-mode .hero-text h3 {
     color: #A9C9A0;
+}
+
+/* NIGHT MODE FOR ALL PAGES */
+
+.theme-control {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+body.dark-mode {
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+body.dark-mode header {
+    background-color: #111111;
+    border-bottom-color: #444444;
+}
+
+body.dark-mode .logo a {
+    color: #FFFFFF;
+}
+
+body.dark-mode .game-listing,
+body.dark-mode .field-card,
+body.dark-mode .get-involved,
+body.dark-mode .faq-section details,
+body.dark-mode .video-box {
+    background-color: #263D2D;
+    color: #FFFFFF;
+}
+
+/* Navigation bubbles */
+
+body.dark-mode .header-nav a {
+    background-color: #365C42;
+    color: #FFFFFF;
+}
+
+body.dark-mode .header-nav a[aria-current="page"] {
+    background-color: #F5F3EA;
+    color: #111111;
+}
+
+/* Night mode button */
+
+body.dark-mode #night-mode {
+    background-color: #F5F3EA;
+    color: #111111;
+}
+
+body.dark-mode #night-mode:hover {
+    background-color: #DDE9D5;
+}
+
+body.dark-mode #night-mode:active {
+    background-color: #C4D6BA;
+}
+
+/* Links */
+
+body.dark-mode main a:not(.button) {
+    color: #BCE0BE;
+}
+
+
+/* DRAFT 2 - BUTTON HOVER AND ACTIVE STATES */
+
+.button,
+.field-search button {
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+    cursor: pointer;
+}
+
+.button:hover,
+.field-search button:hover {
+    background-color: #24452F;
+}
+
+.button:active,
+.field-search button:active {
+    background-color: #173420;
+    transform: scale(0.97);
+}
+
+/* FOOTER LINKS */
+
+footer a:hover {
+    color: #C4D6BA;
+}
+
+footer a:active {
+    color: #A9C9A0;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #B59A67;
+    outline-offset: 3px;
+}
+
+/* HOW IT WORKS SECTION */
+
+.how-it-works h2,
+.how-it-works > p {
+    text-align: center;
+}
+
+.how-it-works > p {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.step-card {
+    background-color: #DDE9D5;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.step-card h3 {
+    color: #24452F;
+    margin-top: 0;
+}
+
+/* NIGHT MODE */
+
+body.dark-mode .step-card {
+    background-color: #263D2D;
+}
+
+body.dark-mode .step-card h3 {
+    color: #DDE9D5;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FIND FIELD - ADDITIONAL LOCATIONS */
+
+.other-fields {
+    background-color: #DDE9D5;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.other-fields h2 {
+    margin-top: 0;
+}
+
+body.dark-mode .other-fields {
+    background-color: #263D2D;
+    color: white;
+}
+
+/* DRAFT 2 - RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 20px;
+    }
+
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo span {
+        font-size: 2rem;
+    }
+
+    .header-nav {
+        justify-content: center;
+        margin-left: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header-nav a {
+        padding: 10px 15px;
+        font-size: 0.875rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero,
+    .community-section,
+    .game-listing,
+    .field-card,
+    .field-search {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero img,
+    .game-listing img,
+    .field-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters select,
+    .field-search input,
+    .field-search select,
+    .field-search button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .soccer-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .soccer-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .gallery-modal {
+        gap: 5px;
+    }
+
+    .gallery-modal img {
+        max-width: 65%;
+    }
+
+    .gallery-modal button {
+        padding: 8px 10px;
+        font-size: 1.25rem;
+    }
+}
+
+/* RESPONSIVE IMAGES AND EMBEDS */
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+iframe {
+    display: block;
 }
