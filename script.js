@@ -76,3 +76,39 @@ if (nightButton) {
         nightButton.textContent = "Light Mode";
     }
 }
+
+
+/* SEARCH SOCCER FIELDS BY CITY */
+
+const cityInput = document.querySelector(".field-search input");
+const searchButton = document.querySelector(".field-search button");
+const fieldMap = document.querySelector(".map-section iframe");
+
+if (cityInput && searchButton && fieldMap) {
+    function searchFields() {
+        const city = cityInput.value.trim();
+
+        if (city === "") {
+            alert("Please enter a city or ZIP code.");
+            return;
+        }
+
+        const search = `soccer fields in ${city}, California`;
+
+        fieldMap.src =
+            "https://www.google.com/maps?q=" +
+            encodeURIComponent(search) +
+            "&output=embed";
+
+        fieldMap.title = `Soccer fields near ${city}`;
+        fieldMap.scrollIntoView({ behavior: "smooth" });
+    }
+
+    searchButton.addEventListener("click", searchFields);
+
+    cityInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            searchFields();
+        }
+    });
+}

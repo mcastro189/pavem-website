@@ -132,19 +132,19 @@ body.dark-mode .logo img {
 .logo a {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     text-decoration: none;
     color: #111111;
 }
 
 .logo img {
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
 }
 
 .logo span {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
 }
 
@@ -270,6 +270,11 @@ footer {
     color: white;
     padding: 25px 30px;
     text-align: center;
+    border-top: 1px solid transparent;
+}
+
+body.dark-mode footer {
+    border-top-color: #555555;
 }
 
 footer a {
@@ -827,4 +832,14 @@ iframe {
 
 iframe {
     display: block;
+}
+
+/* Galaxy Photo */
+.field-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 10px;
 }
